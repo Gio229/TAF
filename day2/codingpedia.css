@@ -1,0 +1,32 @@
+    .box{
+        border: 2px solid black;
+        margin: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: white;
+    }
+
+    body{
+        background-color: grey;
+    }
+
+    .main-container{
+        display: flex;
+    }
+
+    main{
+        width: 80%;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .moving_square{
+        width:  100px;
+        height:  100px;
+        background-color: red;
+    }
+
+    
