@@ -9,38 +9,31 @@
 <body>
     <h1>Test</h1>
     <script type="text/javascript">
+        var obj = {here: {id: 1}, object: {id: 1}};
         
-        let range = (start, end, step) => {
+        let objectsDeeplyEqual= (cmp1, cmp2) => {
+            
+                if(cmp1 !== cmp2){
 
-let myarray = [];
+                    if(cmp1 instanceof Object && cmp2 instanceof Object){
+                    
+                        for (key in cmp1) {
+              
+                            if (cmp1[key] !== cmp2[key]) {
+                                return objectsDeeplyEqual(cmp1[key], cmp2[key]);
+                            }
+                            
+                        }
 
-if( typeof(step) == 'undefined' ){
-    step = 1;
-}
+                    }else{
+                        return false;
+                    }
+                }
 
-if(!isNaN(start) && !isNaN(end) && !isNaN(step)){
-    if((start < end) && step <= 0){
-
-    }else if((start > end) && step >= 0){
-
-    }else{
-        if(step > 0){
-            for(let i = start; i <= end; i = i + step){
-                myarray.push(i);
+                return true;
             }
-        }else if(step < 0){
-            for(let i = start; i >= end; i = i + step){
-                myarray.push(i);
-            }
-        }
-    }
-    
-}
 
-return myarray;
-}
-
-    console.log(range (19,22))
+        console.log(objectsDeeplyEqual(obj, {here: {id: 1}, object: {id: 1}}));
         
     </script>
 </body>
