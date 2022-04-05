@@ -10,27 +10,20 @@
     <h1>Test</h1>
     <script type="text/javascript">
         
-        let start = 1;
-        let end = 10;
-        let step = 2;
-        let myarray = [];
-        /*let length = 0
-        let el = 0*/
+        let range = (start, end, step) => {
 
-        /*if(start > end){
-            length = (start - end) + 1
-        }else{
-            length = (end - start) + 1
-        }*/
+let myarray = [];
 
-        /*length = Math.abs((end - start) + 1);
+if( typeof(step) == 'undefined' ){
+    step = 1;
+}
 
-        if(!isNaN(start) && !isNaN(end) && !isNaN(step)){
-            for(let i = 0; i < length; i = i + step){
-                
-            }
-        }
-        */
+if(!isNaN(start) && !isNaN(end) && !isNaN(step)){
+    if((start < end) && step <= 0){
+
+    }else if((start > end) && step >= 0){
+
+    }else{
         if(step > 0){
             for(let i = start; i <= end; i = i + step){
                 myarray.push(i);
@@ -40,10 +33,15 @@
                 myarray.push(i);
             }
         }
-
-        console.log(myarray);
-        
+    }
     
+}
+
+return myarray;
+}
+
+    console.log(range (19,22))
+        
     </script>
 </body>
 </html>

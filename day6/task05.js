@@ -2,12 +2,9 @@ module.exports = {
     range: function(start, end, step){
 
         let myarray = [];
-        let steped = 0;
 
-        if( typeof(steped) == 'undefined' ){
-            steped = 1;
-        }else{
-            steped = step;
+        if( typeof(step) == 'undefined' ){
+            step = 1;
         }
 
         if(!isNaN(start) && !isNaN(end) && !isNaN(step)){
