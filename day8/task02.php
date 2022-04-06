@@ -15,7 +15,3 @@ function dog_bark(int $woof_nb){
     }
     echo $display . "\n";
 }
-dog_bark(3);
-dog_bark(-42);
-dog_bark(1);
-dog_bark(2);
