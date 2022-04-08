@@ -1,7 +1,12 @@
+/*--------------Framwork-------*/
 *{
     margin: 0px;
     padding: 0px;
     font-family: "roboto";
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
